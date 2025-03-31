@@ -332,9 +332,6 @@ nav {
 }
 
 /* Contact Section General Styling */
-/* Contact Section */
-/* Contact Section */
-/* Contact Section */
 #contact {
   text-align: center;
   padding: 50px 0;  /* Use same vertical padding as the Skills section */
@@ -855,91 +852,144 @@ nav {
 
 /* Mobile Phones (max-width: 576px) */
 @media (max-width: 576px) {
+  /* General Adjustments */
   .logo {
     font-size: 1.5rem;
-    text-align: center;
   }
 
+  /* Home Section */
   #home {
-    height: 80vh;
-    padding: 10px;
-    text-align: center;
+    height: 85vh;
+    padding: 15px;
   }
 
   .content h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 2.2rem;
   }
 
   .typewriter span {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.6rem;
   }
 
-  .projects-title, .skills-title, .contact-title, #education h2 {
-    font-size: 2.5rem;
-    text-align: center;
+  /* Section Titles */
+  .projects-title,
+  .skills-title,
+  .contact-title,
+  #education h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
   }
 
-  .project-box, .education-box {
+  /* Project & Education Boxes */
+  .project-box,
+  .education-box {
     width: 100%;
-    max-width: 350px;
-    margin: 20px auto; /* Add spacing and center content */
+    max-width: 320px;
+    margin: 15px auto;
   }
 
+  /* Skills Cards */
   .skill-card {
-    width: 100px;
-    padding: 10px;
-    margin: 10px auto; /* Center cards with spacing */
+    width: 110px;
+    padding: 15px;
+    margin: 10px;
   }
 
   .skill-logo {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto; /* Center logos */
+    width: 60px;
+    height: 60px;
   }
 
-  .contact-form-box, .contact-info-box {
-    width: 95%;
-    padding: 15px;
-    margin: 10px auto; /* Center and add spacing */
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form-box,
+  .contact-info-box {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    max-width: 200px;
+    margin-bottom: 20px;
   }
 
   .about-inner-container h2 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .about-inner-container p {
+    font-size: 0.95rem;
+  }
+
+  /* Social Links */
+  .social-links i {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.3rem;
   }
 }
 
 /* Very Small Devices (max-width: 400px) */
 @media (max-width: 400px) {
+  /* Typography Adjustments */
   .content h1 {
-    font-size: 1.8rem;
-    text-align: center;
+    font-size: 1.9rem;
   }
 
   .typewriter span {
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.3rem;
   }
 
-  .projects-title, .skills-title, .contact-title, #education h2 {
-    font-size: 2rem;
-    text-align: center;
+  /* Section Titles */
+  .projects-title,
+  .skills-title,
+  .contact-title,
+  #education h2 {
+    font-size: 2.2rem;
   }
 
+  /* Project Buttons */
   .project-buttons {
     flex-direction: column;
-    gap: 8px;
-    align-items: center; /* Center buttons */
+    gap: 10px;
   }
 
   .project-btn {
     width: 100%;
-    text-align: center;
+    padding: 10px;
+  }
+
+  /* Contact Form */
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  #contact-form button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+
+  /* Skills Cards */
+  .skill-card {
+    width: 100px;
+    padding: 12px;
+  }
+
+  .skill-logo {
+    width: 55px;
+    height: 55px;
   }
 }
-
-
-
-
