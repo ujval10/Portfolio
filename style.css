@@ -785,4 +785,142 @@ nav {
   margin: 5px 0; /* Reduced margins for paragraphs */
 }
 
+/* ==================== */
+/* MOBILE RESPONSIVENESS */
+/* ==================== */
+
+@media (max-width: 1200px) {
+  /* Adjustments for large tablets */
+  .projects-container, .skills-container, .education-container {
+    gap: 15px;
+  }
+  
+  .project-box, .education-box {
+    width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Adjustments for medium tablets */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    margin-bottom: 20px;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form-box, .contact-info-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for small tablets */
+  .nav-links {
+    display: none; /* Consider replacing with hamburger menu */
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .typewriter span {
+    font-size: 2rem;
+  }
+  
+  .projects-title, .skills-title, .contact-title, #education h2 {
+    font-size: 3rem;
+  }
+  
+  .skill-card {
+    width: 120px;
+    padding: 15px;
+  }
+  
+  .skill-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for mobile phones */
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  #home {
+    height: 80vh;
+    padding: 10px;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .typewriter span {
+    font-size: 1.5rem;
+  }
+  
+  .projects-title, .skills-title, .contact-title, #education h2 {
+    font-size: 2.5rem;
+  }
+  
+  .project-box, .education-box {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .skill-card {
+    width: 100px;
+    padding: 10px;
+  }
+  
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact-form-box, .contact-info-box {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .about-inner-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Adjustments for very small devices */
+  .content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .typewriter span {
+    font-size: 1.2rem;
+  }
+  
+  .projects-title, .skills-title, .contact-title, #education h2 {
+    font-size: 2rem;
+  }
+  
+  .project-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .project-btn {
+    width: 100%;
+  }
+}
+
+
 

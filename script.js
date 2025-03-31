@@ -25,5 +25,9 @@ function scrollRight() {
     skillsScroll.scrollLeft += 150;
 }
 
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+
 
 
