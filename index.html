@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujval Portfolio</title>
+    
+    <!-- External CSS and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Enable Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Styling */
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Navbar fixed at top */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-container a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-container a.active {
+            color: rgb(109, 67, 0);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Ujval</span>
+            </div>
+            <div class="links">
+                <a href="#home" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Home</a>
+                <a href="#about" class="nav-link" data-aos="fade-up" data-aos-duration="1000">About</a>
+                <a href="#projects" class="nav-link" data-aos="fade-up" data-aos-duration="1000">projects</a>
+                <a href="#skills" class="nav-link" data-aos="fade-up" data-aos-duration="1000">skills</a>
+                <a href="#education" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Education</a>
+                <a href="#contact" class="nav-link contact-btn" data-aos="fade-up" data-aos-duration="1000">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <video autoplay muted loop id="homeVideo">
+          <source src="nature.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="content">
+          <h1 data-aos="fade-left" data-aos-duration="1000">HI! I'm</h1>
+          <h1 data-aos="fade-left" data-aos-duration="1000">
+            <span>ADIBHATLA PASUPATI UJVAL</span>
+          </h1>
+          <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+            I'm a <span></span>
+          </div>
+          <div class="social-links" data-aos="flip-down" data-aos-duration="1000">
+            <a href="https://github.com/ujval10" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>              
+            <a href="https://www.linkedin.com/in/YourLinkedInUsername/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>          
+          <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000">
+            <a href="https://drive.google.com/file/d/1hByBiJfVOaA7Pn1N9_kcT7Y5b9jFsa1d/view?usp=drive_link" download>
+              <button>Download CV</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- About Me Section
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p>
+                Aspiring UI/UX Designer and Frontend Developer with Proficiency in React.js. 
+                Skilled in creating intuitive, user-centered designs and functional interfaces. 
+                Strong decision-making abilities with a focus on delivering high-quality, user-friendly web applications. 
+                Recently developed a keen interest in React.js and have been actively enhancing my skills in this area. 
+                Skilled in React.js, HTML, CSS, and JavaScript.
+            </p>
+        </div>
+ <!-- About Section -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-content">
+      <!-- Image on the left -->
+      <div class="image" data-aos="fade" data-aos-duration="2500">
+        <img src="Uj.jpg" alt="Profile Picture">
+      </div>
+
+      <!-- Text content on the right -->
+      <div class="about-inner-container">
+        <h2>About Me</h2>
+        <p>
+          I am a Frontend Developer skilled in React.js, HTML, CSS, and JavaScript, specializing in developing high-quality, user-friendly web applications with a strong emphasis on performance and responsiveness. With expertise in UI/UX design using Figma, I create intuitive and visually appealing interfaces that enhance user experience. Additionally, my experience with Python allows me to implement efficient backend logic and automation. Passionate about both design and development, I strive to blend creativity with technical expertise to deliver modern, impactful, and seamless digital experiences.
+        </p>
+        <div class="btn">
+          <!-- Anchor link to the education section -->
+          <a href="#education" class="learn-more-btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h1 class="projects-title">Projects:</h1>
+        <div class="projects-container">
+          <!-- Project Box 1: Syncia -->
+          <div class="project-box">
+            <img src="5.PNG" alt="EzyCart Project">
+            <div class="project-overlay">
+              <h3>EzyCart</h3>
+              <p class="project-description">
+                The Dynamic E-Commerce Website is an interactive platform designed to enhance the online shopping experience. It fetches real-time product data from FakeStoreAPI and presents it with an intuitive, user-friendly interface. The platform ensures smooth product browsing, efficient cart management, and seamless navigation across all devices. This project demonstrates the practical use of APIs to create scalable and engaging e-commerce solutions. 
+              </p>
+              <!-- Things I Learned Section -->
+              <div class="project-learned">
+                <strong>Things I Learned:</strong>
+                <ul class="project-skills">
+                  <li>React</li>
+                  <li>Tailwind CSS</li>
+                  <li>REDUX</li>
+                  <li>FakeAPIstore</li>
+                </ul>
+              </div>
+              <div class="project-buttons">
+                <a href="https://github.com/ujval10/Ujval-Project.git" class="project-btn git-btn" target="_blank">Git Link</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Box 2: Timeswitch -->
+          <div class="project-box">
+            <img src="rain.PNG" alt="Timeswitch Project">
+            <div class="project-overlay">
+              <h3>Automatic Car Wipers</h3>
+              <p class="project-description">
+                The Rain Sensing Automatic Car Wiper System is a smart, budget-friendly solution to enhance driving safety during rainy conditions. It automatically detects rain and adjusts the wiper speed based on intensity, ensuring clear visibility. The system also provides real-time feedback to the driver for better control. This project focuses on delivering affordable automation for standard and budget-friendly vehicles.
+              </p>
+              <!-- Things I Learned Section -->
+              <div class="project-learned">
+                <strong>Things I Learned:</strong>
+                <ul class="project-skills">
+                  <li>Hardware-Interfacing</li>
+                  <li>Decision-Making</li>
+                  <li>Sensitivity-Adjustment</li>
+                </ul>
+              </div>
+              <div class="project-buttons">
+                <a href="VIDEO_LINK_HERE" class="project-btn git-btn" target="_blank">Video Link</a>
+                <a href="PROJECT_LINK_HERE" class="project-btn view-btn" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Box 3: Notrix -->
+          <div class="project-box">
+            <img src="key.PNG" alt="Timeswitch Project">
+            <div class="project-overlay">
+              <h3>Modern Encription & Decription</h3>
+              <p class="project-description">
+                The Modern Encryption & Decryption Technique is an advanced security solution designed to protect sensitive data. It leverages ASCII values and binary operations, inspired by the RSA algorithm, to enhance encryption strength. This project demonstrates a customized approach to secure communication through efficient key-based encoding and decoding.
+              </p>
+              <!-- Things I Learned Section -->
+              <div class="project-learned">
+                <strong>Things I Learned:</strong>
+                <ul class="project-skills">
+                  <li>Cryptography</li>
+                  <li>Encryption</li>
+                  <li>Binary Operations</li>
+                  <li>Security</li>
+                </ul>
+              </div>
+              <div class="project-buttons">
+                <a href="GITHUB_LINK_HERE" class="project-btn git-btn" target="_blank">Git Link</a>
+                <a href="PROJECT_LINK_HERE" class="project-btn view-btn" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+
+    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills">
+  <h1 class="skills-title">Skills:</h1>
+  <div class="skills-container">
+      <!-- HTML Card -->
+      <div class="skill-card html">
+          <img src="HTML.svg" alt="HTML Logo" class="skill-logo">
+          <h2 class="skill-name">HTML</h2>
+      </div>
+      <!-- CSS Card -->
+      <div class="skill-card css">
+          <img src="CSS.svg" alt="CSS Logo" class="skill-logo">
+          <h2 class="skill-name">CSS</h2>
+      </div>
+      <!-- JavaScript Card -->
+      <div class="skill-card javascript">
+          <img src="JavaScript.svg" alt="JavaScript Logo" class="skill-logo">
+          <h2 class="skill-name">JavaScript</h2>
+      </div>
+      <!-- React Card -->
+      <div class="skill-card react">
+          <img src="React-Dark.svg" alt="React Logo" class="skill-logo">
+          <h2 class="skill-name">React</h2>
+      </div>
+      <!-- Redux Card -->
+      <div class="skill-card redux">
+          <img src="Redux.svg" alt="Redux Logo" class="skill-logo">
+          <h2 class="skill-name">Redux</h2>
+      </div>
+      <!-- Tailwind Card -->
+      <div class="skill-card tailwind">
+          <img src="Tailwind.svg" alt="Tailwind CSS Logo" class="skill-logo">
+          <h2 class="skill-name">Tailwind CSS</h2>
+      </div>
+      <!-- GitHub Card -->
+      <div class="skill-card github">
+          <img src="Github-Dark.svg" alt="GitHub Logo" class="skill-logo">
+          <h2 class="skill-name">GitHub</h2>
+      </div>
+      <!-- Figma Card -->
+      <div class="skill-card figma">
+          <img src="Figma-Dark.svg" alt="Figma Logo" class="skill-logo">
+          <h2 class="skill-name">Figma</h2>
+      </div>
+      <!-- Discord Card -->
+      <div class="skill-card discord">
+          <img src="Discord.svg" alt="Discord Logo" class="skill-logo">
+          <h2 class="skill-name">Discord</h2>
+      </div>
+      <!-- VSCode Card -->
+      <div class="skill-card vscode">
+          <img src="VSCode-Dark.svg" alt="VSCode Logo" class="skill-logo">
+          <h2 class="skill-name">VSCode</h2>
+      </div>
+  </div>
+</section>
+
+   <!-- Education Section -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="education-container">
+    <!-- Education Box 1 -->
+    <div class="education-box">
+      <h3>MASTERS OF COMPUTER APPLICATIONS</h3>
+      <strong>Relevant Coursework:</strong>
+      <ul class="project-skills">
+        <li>Data Structures</li>
+        <li>Robotics</li>
+        <li>IOT</li>
+        <li>Programming</li>
+        <li>DBMS</li>
+      </ul>
+      <p>Gayatri Vidya Prashad Degree and PG Courses</p>
+      <p>Visakhapatnam</p>
+    </div>
+
+    <!-- Education Box 1 -->
+    <div class="education-box">
+      <h3>BACHELOR'S OF COMPUTER APPLICATIONS</h3>
+      <strong>Relevant Coursework:</strong>
+      <ul class="project-skills">
+        <li>Data Structures</li>
+        <li>Algorithms</li>
+        <li>Programming</li>
+        <li>DBMS</li>
+      </ul>
+      <p>Gayatri Vidya Prashad Degree and PG Courses</p>
+      <p>Visakhapatnam</p>
+    </div>
+
+    <!-- Education Box 1 -->
+    <div class="education-box">
+      <h3>HIGHER SECONDARY CERTIFICATE</h3>
+      <!-- <strong>Relevant Coursework:</strong>
+      <ul class="project-skills">
+        <li>MPC</li>
+      </ul> -->
+      <p>NRI Junior College</p>
+      <p>Visakhapatnam</p>
+    </div>
+
+    <!-- Education Box 4 -->
+    <div class="education-box">
+      <h3>CENTRAL BOARD OF SECONDARY EDUCATION</h3>
+      <p>Visakha Valley School</p>
+      <p>Visakhapatnam</p>
+  </div>
+</section>
+
+
+ <!-- Contact Section -->
+<section id="contact">
+  <h1 class="contact-title">Contact Me:</h1>
+  <div class="contact-container">
+    <!-- Contact Form Box (Left Side) -->
+    <div class="contact-form-box">
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message here..." rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Contact Info Box (Right Side) -->
+    <div class="contact-info-box">
+      <p><strong>Phone:</strong> 8688640109</p>
+      <p><strong>Email:</strong> <a href="mailto:ujval@gmail.com">ujval591@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Additional Contact Content (Optional) -->
+  <div class="additional-contact-content">
+  </div>
+</section>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+
+        // Smooth Scrolling for Navbar Links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar Highlight on Scroll
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+<footer id="footer">
+  <p>Copyright ©2025 Developed by Adibhatla Pasupati Ujval</p>
+</footer>
+
+     
+
+</body>
+</html>
