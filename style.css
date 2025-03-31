@@ -785,26 +785,33 @@ nav {
 /* ==================== */
 /* MOBILE RESPONSIVENESS */
 /* ==================== */
-
 /* About Section */
 #about {
   padding: 20px 10px;
 }
 .about-container {
-  width: 100%;
+  width: 100%; /* Keep full width on all devices */
   padding: 0 10px;
 }
 .about-content {
-  flex-direction: column;
+  display: flex; /* Maintain row-based layout */
+  flex-direction: row; /* Row layout for both desktop and mobile */
   align-items: center;
-  gap: 10px;
-  text-align: center;
+  gap: 20px; /* Maintain consistent spacing */
+  text-align: left; /* Align text to the left */
 }
 .image {
-  max-width: 200px;
+  flex: 0 0 auto;
+  max-width: 250px; /* Set fixed image width */
+}
+.image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .about-inner-container {
-  text-align: center;
+  flex: 1;
+  text-align: left; /* Text alignment for all devices */
 }
 
 /* Projects Section */
@@ -812,13 +819,13 @@ nav {
   padding: 20px 10px;
 }
 .projects-container {
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Maintain row-based layout */
+  flex-direction: row; /* Row layout for projects */
   gap: 20px;
 }
 .project-box {
-  width: 90%;
-  margin: 0 auto;
+  width: calc(33.33% - 20px); /* 3 cards per row */
+  max-width: 300px;
 }
 
 /* Skills Section */
@@ -826,13 +833,14 @@ nav {
   padding: 20px 10px;
 }
 .skills-container {
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping to fit more content */
+  gap: 20px; /* Consistent spacing between cards */
+  justify-content: center;
 }
 .skill-card {
-  width: 80%;
-  margin: 10px auto;
+  flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+  max-width: 200px;
 }
 
 /* Education Section */
@@ -840,44 +848,44 @@ nav {
   padding: 20px 10px;
 }
 .education-container {
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Maintain row-based layout */
+  flex-direction: row;
   gap: 20px;
 }
 .education-box {
-  width: 90%;
-  margin: 0 auto;
+  width: calc(33.33% - 20px); /* 3 items per row */
+  max-width: 300px;
 }
 
 /* Contact Section */
 #contact {
   padding: 20px 10px;
-  flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 .contact-container {
-  flex-direction: column;
-  align-items: center;
+  display: flex;
+  flex-direction: row; /* Keep side-by-side layout */
   gap: 20px;
 }
 .contact-form-box,
 .contact-info-box {
-  width: 90%;
-  margin: 0 auto;
+  flex: 1; /* Allow equal space for both columns */
+  width: 100%; /* Ensure they fit in the container */
 }
 
 /* Home Section */
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 #home {
   height: 85vh;
   padding: 15px;
 }
 .content h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 .typewriter span {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
+
 
