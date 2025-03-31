@@ -786,107 +786,98 @@ nav {
 /* MOBILE RESPONSIVENESS */
 /* ==================== */
 
-/* Mobile View Adjustments for screens up to 768px */
-@media (max-width: 768px) {
-  /* About Section Mobile Adjustments */
-  #about {
-    padding: 20px 10px;
-  }
-  .about-container {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-  .image {
-    max-width: 200px;
-  }
-  .about-inner-container {
-    text-align: center;
-  }
-
-  /* Projects Section Mobile Adjustments */
-  #projects {
-    padding: 20px 10px;
-  }
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .project-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /* Skills Section Mobile Adjustments */
-  #skills {
-    padding: 20px 10px;
-  }
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .skill-card {
-    width: 80%;
-    margin: 10px auto;
-  }
-
-  /* Education Section Mobile Adjustments */
-  #education {
-    padding: 20px 10px;
-  }
-  .education-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .education-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /* Contact Section Mobile Adjustments */
-  #contact {
-    padding: 20px 10px;
-    flex-direction: column;
-    text-align: center;
-  }
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .contact-form-box,
-  .contact-info-box {
-    width: 90%;
-    margin: 0 auto;
-  }
+/* About Section */
+#about {
+  padding: 20px 10px;
+}
+.about-container {
+  width: 100%;
+  padding: 0 10px;
+}
+.about-content {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.image {
+  max-width: 200px;
+}
+.about-inner-container {
+  text-align: center;
 }
 
-/* Additional Mobile Adjustments for screens up to 576px (Home Section) */
-@media (max-width: 576px) {
-  /* General Adjustments */
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  /* Home Section */
-  #home {
-    height: 85vh;
-    padding: 15px;
-  }
-
-  .content h1 {
-    font-size: 2.2rem;
-  }
-
-  .typewriter span {
-    font-size: 1.6rem;
-  }
+/* Projects Section */
+#projects {
+  padding: 20px 10px;
 }
+.projects-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.project-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Skills Section */
+#skills {
+  padding: 20px 10px;
+}
+.skills-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.skill-card {
+  width: 80%;
+  margin: 10px auto;
+}
+
+/* Education Section */
+#education {
+  padding: 20px 10px;
+}
+.education-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.education-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+  padding: 20px 10px;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.contact-form-box,
+.contact-info-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Home Section */
+.logo {
+  font-size: 1.5rem;
+}
+#home {
+  height: 85vh;
+  padding: 15px;
+}
+.content h1 {
+  font-size: 2.2rem;
+}
+.typewriter span {
+  font-size: 1.6rem;
+}
+
