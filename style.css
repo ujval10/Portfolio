@@ -782,9 +782,6 @@ nav {
   margin: 5px 0; /* Reduced margins for paragraphs */
 }
 
-/* ==================== */
-/* MOBILE RESPONSIVENESS */
-/* ==================== */
 /* Mobile View Adjustments for screens up to 768px */
 @media (max-width: 768px) {
   /* Navbar */
@@ -847,7 +844,6 @@ nav {
     width: 90%;
     margin: 0 auto;
   }
-  /* Adjust project buttons if needed */
   .project-btn {
     padding: 6px 12px;
     font-size: 0.8rem;
@@ -902,7 +898,7 @@ nav {
   }
 }
 
-/* Additional Mobile Adjustments for screens up to 576px */
+/* Additional Adjustments for screens up to 576px */
 @media (max-width: 576px) {
   /* General Adjustments */
   .logo {
@@ -921,6 +917,4 @@ nav {
     font-size: 1.6rem;
   }
 }
-
-
 
