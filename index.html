@@ -60,21 +60,30 @@
 <body>
 
     <!-- Navbar Section -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-                <span>Ujval</span>
-            </div>
-            <div class="links">
-                <a href="#home" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Home</a>
-                <a href="#about" class="nav-link" data-aos="fade-up" data-aos-duration="1000">About</a>
-                <a href="#projects" class="nav-link" data-aos="fade-up" data-aos-duration="1000">projects</a>
-                <a href="#skills" class="nav-link" data-aos="fade-up" data-aos-duration="1000">skills</a>
-                <a href="#education" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Education</a>
-                <a href="#contact" class="nav-link contact-btn" data-aos="fade-up" data-aos-duration="1000">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar Section -->
+<nav>
+  <div class="nav-container">
+    <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+      <span>Ujval</span>
+    </div>
+    <!-- Hamburger Icon for Mobile -->
+    <div class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Navigation Links (hidden on mobile by default) -->
+    <div class="links">
+      <a href="#home" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Home</a>
+      <a href="#about" class="nav-link" data-aos="fade-up" data-aos-duration="1000">About</a>
+      <a href="#projects" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Projects</a>
+      <a href="#skills" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Skills</a>
+      <a href="#education" class="nav-link" data-aos="fade-up" data-aos-duration="1000">Education</a>
+      <a href="#contact" class="nav-link contact-btn" data-aos="fade-up" data-aos-duration="1000">Contact</a>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Home Section -->
     <section id="home">
@@ -106,19 +115,6 @@
         </div>
       </section>
       
-
-    <!-- About Me Section
-    <section id="about">
-        <div class="about-container">
-            <h2>About Me</h2>
-            <p>
-                Aspiring UI/UX Designer and Frontend Developer with Proficiency in React.js. 
-                Skilled in creating intuitive, user-centered designs and functional interfaces. 
-                Strong decision-making abilities with a focus on delivering high-quality, user-friendly web applications. 
-                Recently developed a keen interest in React.js and have been actively enhancing my skills in this area. 
-                Skilled in React.js, HTML, CSS, and JavaScript.
-            </p>
-        </div>
  <!-- About Section -->
 <section id="about">
   <div class="about-container">
@@ -417,13 +413,26 @@
     </script>
     <script src="script.js"></script>
 
-    <!-- Footer -->
+    <!-- Footer
 <footer id="footer">
   <p>Copyright ©2025 Developed by Adibhatla Pasupati Ujval</p>
-</footer>
+</footer> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger-menu");
+    const links = document.querySelector(".links");
+
+    hamburger.addEventListener("click", function() {
+      hamburger.classList.toggle("active");
+      links.classList.toggle("active");
+    });
+  });
+</script>
+
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</body>
-</html>
+
+

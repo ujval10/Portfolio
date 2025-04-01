@@ -171,7 +171,7 @@ nav {
 
 /* About Section */
 #about {
-  background: linear-gradient(to right, #eaf2d7, #b3dee2);
+  background: linear-gradient(to right, #8AB2A6, #b3dee2);
   padding: 20px 10px;
 }
 
@@ -334,12 +334,13 @@ nav {
 /* Contact Section General Styling */
 #contact {
   text-align: center;
-  padding: 50px 0;  /* Use same vertical padding as the Skills section */
+  padding: 50px 0;
   background: linear-gradient(to right, #8AB2A6, #b3dee2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0; /* Remove bottom margin to match Skills section */
+  margin-bottom: 0;
+  height: 1000px; /* Fixed height */
 }
 
 .contact-title {
@@ -498,10 +499,11 @@ nav {
 #projects {
   text-align: center;
   padding: 10px 10px; /* Reduced padding to minimize inner space */
-  background: linear-gradient(to right, #eaf2d7, #b3dee2);
+  background: linear-gradient(to right, #8AB2A6, #b3dee2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
 }
 
 .projects-title {
@@ -654,11 +656,12 @@ nav {
 #skills {
   text-align: center;
   padding: 50px 0; /* Keep existing padding */
-  background: linear-gradient(to right, #eaf2d7, #b3dee2);
+  background: linear-gradient(to right, #8AB2A6, #b3dee2);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 0; /* Remove bottom margin */
+  height: 800px;
 }
 
 .skills-title {
@@ -736,6 +739,7 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-top: 0; /* Remove top margin */
+  height: auto
 }
 
 #education h2 {
@@ -783,142 +787,689 @@ nav {
 }
 
 /* Mobile View Adjustments for screens up to 768px */
-@media (max-width: 768px) {
-  /* Navbar */
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+
+/* Global Styles – Applied on all screens */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to right, #8AB2A6, #b3dee2);
+    color: #114b5f;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(17, 75, 95, 0.9);
     padding: 10px;
-  }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-  }
-  .nav-links li {
-    padding: 8px 0;
-  }
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
 
-  /* Home Section */
-  #home {
-    height: 90vh;
-    padding: 20px;
-  }
-  .content h1 {
-    font-size: clamp(2rem, 2.5rem + 2vw, 3rem);
-  }
-  .typewriter span {
-    font-size: 2rem;
-  }
-
-  /* About Section */
-  #about {
-    padding: 20px 10px;
-  }
-  .about-container {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .about-content {
-    flex-direction: column;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-  .image {
-    max-width: 200px;
-  }
-  .about-inner-container {
-    text-align: center;
-  }
+    padding: 0 15px;
+}
 
-  @media (max-width: 768px) {
-    /* Projects Section */
-    #projects {
-      padding: 20px 10px;
-      margin-top: 50px; /* Add spacing to push it below the About section */
+.logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #114b5f;
+}
+.logo span {
+    color: #114b5f;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    padding: 10px;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #114b5f;
+    transition: color 0.3s ease-in-out;
+}
+.nav-links a:hover {
+    color: #114b5f;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full-screen hero effect on larger screens */
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Video Styling for Home Section */
+#homeVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #F2EFE7;
+}
+.content h1 {
+    font-size: clamp(2rem, 2.5rem + 4vw, 4rem);
+    color: #F2EFE7;
+    margin-bottom: 10px;
+}
+.content h1 span {
+    color: #F2EFE7;
+}
+
+/* Typewriter Effect */
+.content .typewriter {
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1rem + 4vw, 1.5rem);
+    margin: 0;
+    padding: 0;
+}
+.content .typewriter span {
+    color: #f3e8d7;
+    font-size: 3rem;
+    position: relative;
+    transition: 0.3s linear;
+}
+.typewriter span::before {
+    content: "Developer";
+    animation: words 10s infinite;
+}
+.typewriter span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid white;
+    animation: cursor 0.6s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
     }
-    .projects-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+}
+@keyframes words {
+    0%, 33% {
+        content: "Developer";
     }
-    .project-box {
-      width: 90%;
-      margin: 0 auto;
+    34%, 66% {
+        content: "Designer";
     }
-    .project-btn {
-      padding: 6px 12px;
-      font-size: 0.8rem;
-    }
-    .project-buttons {
-      gap: 8px;
-    }
+}
+
+/* Mobile View Adjustments for screens up to 768px */
+/* Desktop Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #114b5f;
+}
+
+.logo span {
+  color: #114b5f;
+}
+
+/* Mobile View Adjustments for screens up to 768px */
+@media (max-width: 768px) {
+  /* Adjust container spacing and allow wrapping */
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: relative;  /* For positioning the hamburger */
   }
   
-
-  /* Skills Section */
-  #skills {
-    padding: 20px 10px;
+  /* Adjust logo: keep it left */
+  .logo {
+    font-size: 1.8rem;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
   }
-  .skills-container {
+  
+  /* Reduce margin on logo span so it doesn't push items off-screen */
+  .logo span {
+    margin-right: 600px;  
+    color: #114b5f;
+  }
+  
+  /* Hide the nav links container by default */
+  .links {
+    display: none;  /* Hidden by default on mobile */
+  }
+  
+  /* When active, show the mobile menu */
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust depending on navbar height */
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  /* Mobile menu link styling */
+  .links a {
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #114b5f;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    color: #88d498;
+  }
+  
+  /* Hamburger Icon for Mobile */
+/* Hamburger Icon for Mobile */
+.hamburger {
+  display: block;           /* Show hamburger on mobile */
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 50%;                 /* Vertically center within nav-container */
+  right: 20px;              /* Moves it 20px from the right edge */
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #114b5f;
+  margin: 8px 0;  
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+  /* Animate hamburger to close icon when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Home */
+@media (max-width: 768px) {
+  /* Adjust Home Section height */
+  #home {
+    height: 80vh;
+  }
+  
+  /* Optionally hide the video background on mobile for performance */
+  #homeVideo {
+    display: block;         /* Keep the video visible */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Ensures the video covers the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Optionally adjust brightness if needed */
+    filter: brightness(50%);
+  }
+  /* Adjust the content container padding */
+  #home .content {
+    padding-top: 15vh;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Decrease headline sizes */
+  #home h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Decrease typewriter text size */
+  .typewriter {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Adjust social icon size */
+  .social-links a i {
+    font-size: 1.5rem;
+    margin: 0 6px;
+  }
+  
+  /* Adjust button size */
+  .btn button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* about */
+@media (max-width: 768px) {
+  /* Overall About section adjustments */
+  #about {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  /* Container adjustments: use full width on mobile */
+  .about-container {
+    width: 100%;
+  }
+  
+  /* Stack image and text vertically */
+  .about-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
   }
-  .skill-card {
-    width: 80%;
-    margin: 10px auto;
+  
+  /* Image styling: reduce size and add spacing below */
+  .about-content .image {
+    margin-bottom: 20px;
   }
+  
+  .about-content .image img {
+    width: 100%;
+    max-width: 250px;       /* Adjust maximum width as needed */
+    border-radius: 8px;      /* Optional: round the image corners */
+  }
+  
+  /* Text container adjustments */
+  .about-inner-container {
+    padding: 0 20px;
+  }
+  
+  .about-inner-container h2 {
+    font-size: 1.8rem;       /* Reduce heading size on mobile */
+    margin-bottom: 10px;
+  }
+  
+  .about-inner-container p {
+    font-size: 1rem;         /* Adjust paragraph text size */
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Button styling adjustments */
+  .btn a.learn-more-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
 
-  /* Education Section */
+/* projects */
+
+@media (max-width: 768px) {
+  /* Projects Section Container */
+  #projects {
+    padding: 20px 10px;
+  }
+  
+  /* Title adjustments */
+  .projects-title {
+    font-size: 2rem;
+    text-align: center;
+    /* margin-top: 1400px;      Pushes the title down */
+    margin-bottom: 20px;
+  }
+  
+  
+  /* Container for project boxes */
+  .projects-container {
+    display: flex;
+    flex-direction: column;    /* Stack projects vertically */
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual Project Box */
+  .project-box {
+    width: 90%;                /* Take up most of the viewport width */
+    max-width: 350px;          /* Prevent it from growing too large */
+    margin: 0 auto;
+  }
+  
+  /* Ensure images scale to fit */
+  .project-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Project Overlay (content over the image) */
+  .project-overlay {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Project Title adjustments */
+  .project-overlay h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Project Description adjustments */
+  .project-description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Learned Points Section */
+  .project-learned {
+    margin-bottom: 10px;
+  }
+  
+  .project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-skills li {
+    font-size: 0.85rem;
+    padding: 4px 6px;
+    background: #eaf2d7;
+    border-radius: 4px;
+    color: #114b5f;
+  }
+  
+  /* Project Buttons Layout */
+  .project-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .project-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+/* Skills */
+
+@media (max-width: 768px) {
+  /* Overall Skills Section */
+  #skills {
+    padding: 20px 10px;
+    scroll-margin-top: 200px;
+  }
+  
+  /* Title adjustments */
+  .skills-title {
+    font-size: 1.8rem;
+    text-align: center;
+    /* margin-top: 2500px; */
+    margin-bottom: 20px;
+  }
+  
+  /* Skills container: use grid to display cards in two columns */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  /* Skill card styling */
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Skill logo adjustments */
+  .skill-logo {
+    width: 50px;   /* Adjust the size of the logo */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Skill name adjustments */
+  .skill-name {
+    font-size: 1rem;
+  }
+}
+
+
+/*Education*/
+@media (max-width: 768px) {
+  /* Overall Education Section adjustments */
   #education {
     padding: 20px 10px;
   }
+  
+  /* Title adjustments for the Education section */
+  #education h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    /* margin-top: 2450px; */
+    margin-bottom: 20px;
+  }
+  
+  /* Education container: stack boxes vertically with spacing */
   .education-container {
+    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
+  
+  /* Individual Education Box styling */
   .education-box {
-    width: 90%;
-    margin: 0 auto;
+    background: #f9f9f9;     /* Optional light background for separation */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+  
+  .education-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .education-box strong {
+    font-size: 1rem;
+  }
+  
+  /* Style the list of relevant coursework */
+  .education-box ul.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  
+  .education-box ul.project-skills li {
+    background: #eaf2d7;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+  }
+  
+  /* Adjust paragraph text inside each education box */
+  .education-box p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+}
 
-  /* Contact Section */
+/*Contact*/
+@media (max-width: 768px) {
+  /* Overall Contact Section */
   #contact {
     padding: 20px 10px;
-    flex-direction: column;
-    text-align: center;
   }
+  
+  /* Title adjustments */
+  .contact-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    /* margin-top: 2500px; */
+  }
+  
+  /* Stack contact form and info vertically */
   .contact-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
+  
+  /* Ensure both boxes take full width (or a max-width) */
   .contact-form-box,
   .contact-info-box {
-    width: 90%;
+    width: 100%;
+    max-width: 600px; /* adjust as needed */
     margin: 0 auto;
   }
+  
+  /* Contact Form Adjustments */
+  #contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  #contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #18301f;
+    border-radius: 4px;
+  }
+  
+  #contact-form button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #114b5f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #contact-form button:hover {
+    background: #88d498;
+  }
+  
+  /* Contact Info Adjustments */
+  .contact-info-box p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .contact-info-box a {
+    color: #114b5f;
+    text-decoration: none;
+  }
 }
 
-/* Additional Adjustments for screens up to 576px */
-@media (max-width: 576px) {
-  /* General Adjustments */
-  .logo {
-    font-size: 1.5rem;
-  }
 
-  /* Home Section */
-  #home {
-    height: 85vh;
-    padding: 15px;
-  }
-  .content h1 {
-    font-size: 2.2rem;
-  }
-  .typewriter span {
-    font-size: 1.6rem;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
