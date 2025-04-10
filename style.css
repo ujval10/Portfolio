@@ -331,138 +331,63 @@ nav {
     background-color: #c6dabf;
 }
 
-/* Contact Section General Styling */
+Contact Section General Styling
 #contact {
   text-align: center;
   padding: 50px 0;
   background: linear-gradient(to right, #8AB2A6, #b3dee2);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;          /* Centers children horizontally by default */
+  justify-content: center;      /* Centers children vertically */
   margin-bottom: 0;
   height: 1000px; /* Fixed height */
 }
 
 .contact-title {
-  font-size: 4rem;   /* Increased font size to match .skills-title */
+  font-size: 4rem;           /* Increased font size to match .skills-title */
   font-weight: bold;
   color: #114b5f;
-  text-align: center;
-  margin-bottom: 30px;  /* Same bottom margin as in the Skills section */
+  text-align: left;          /* Text within the element is left-aligned */
+  margin-bottom: 30px;       /* Same bottom margin as in the Skills section */
+  align-self: flex-start;    /* Shifts the title to the left edge of the container */
+  margin-left: 220px;         /* Fine-tune horizontal offset */
+  margin-top: 200px;         /* Pushes the title down; adjust this value as needed */
 }
+
 
 
 /* Container for Contact Form and Info Box (side-by-side) */
+/* Base reset and body background */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;          /* Ensure full height is available */
+  font-family: Arial, sans-serif; /* optional base font */
+}
+
+/* Container to center the box vertically and horizontally */
 .contact-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;             /* Reduced gap between the two boxes */
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Contact Form Box (Left Side) */
-.contact-form-box {
-  width: 400px;          /* Adjust this width as needed */
-  border-radius: 15px;
-  background: #ffffff;
-  padding: 20px;         /* Reduced padding for a compact look */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-}
-
-.contact-form-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Form Styling */
-#contact-form {
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
   width: 100%;
+  min-height: 100vh;       /* Full viewport height */
 }
 
-.form-group {
-  margin-bottom: 15px; /* Slightly reduced margin for a tighter group spacing */
+/* Updated white box styling for the contact form */
+.contact-box {
+  background-color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-left: 100px;  /* Adjust this value as needed */
+  margin-right: auto; /* Ensures the extra space is on the right if needed */
 }
-
-.form-group label {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #b3dee2;
-  border-radius: 5px;
-  background-color: #fff;
-  outline: none;
-  transition: border 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #114b5f;
-}
-
-#contact-form button {
-  background: #1dd3b0;
-  color: #114b5f;
-  padding: 12px 25px;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-#contact-form button:hover {
-  background: rgb(84, 150, 114);
-  color: #F2EFE7;
-  border: 2px solid #F2EFE7;
-  box-shadow: 0 0 10px #F2EFE7;
-}
-
-/* Contact Info Box (Right Side) */
-.contact-info-box {
-  width: 300px;          /* Compact width */
-  border-radius: 15px;
-  background: #ffffff;
-  padding: 20px;         /* Reduced padding for a compact layout */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-}
-
-.contact-info-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.contact-info-box p {
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #114b5f;
-}
-
-.contact-info-box a {
-  color: #114b5f;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-info-box a:hover {
-  color: #1dd3b0;
-}
-
 
 
 
@@ -1176,7 +1101,7 @@ nav {
   .projects-title {
     font-size: 2rem;
     text-align: center;
-    /* margin-top: 1400px;      Pushes the title down */
+    /* margin-top: 1px;       */
     margin-bottom: 20px;
   }
   
@@ -1376,85 +1301,72 @@ nav {
   }
 }
 
-/*Contact*/
+/* Base CSS */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;          /* Ensure full height is available */
+  font-family: Arial, sans-serif;
+}
+
+/* Container to center the box vertically and horizontally */
+.contact-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  width: 150%;
+  min-height: 30vh;       /* Full viewport height */
+}
+
+/* Updated white box styling for the contact form */
+.contact-box {
+  background-color: #ffffff;
+  padding: 10px 30px;      /* Reduced vertical padding & increased horizontal padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 150%;
+  max-width: 800px;        /* Increased horizontal width */
+  box-sizing: border-box;
+}
+
+/* Mobile View adjustments */
 @media (max-width: 768px) {
-  /* Overall Contact Section */
   #contact {
-    padding: 20px 10px;
+    padding: 10px 10px;
+    height: auto;
   }
-  
-  /* Title adjustments */
+
   .contact-title {
     font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 20px;
-    /* margin-top: 2500px; */
+    margin: 0 auto 50px auto;
+    position: relative;  /* Enable positioning adjustments */
+    left: 135px;          /* Moves the title 30px to the right */
+    top: 10px;           /* Moves the title 10px down */
   }
   
-  /* Stack contact form and info vertically */
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+  @media (max-width: 768px) {
+    .contact-container {
+      position: relative;
+      flex-direction: column;
+      padding: 0 10px;
+      min-height: auto;
+      top: 50px;   /* Pushes the container 50px down from its original position */
+      left: -30px;  /* Moves the container 20px to the right */
+    }
   
-  /* Ensure both boxes take full width (or a max-width) */
-  .contact-form-box,
-  .contact-info-box {
-    width: 100%;
-    max-width: 600px; /* adjust as needed */
-    margin: 0 auto;
-  }
-  
-  /* Contact Form Adjustments */
-  #contact-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  #contact-form label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #18301f;
-    border-radius: 4px;
-  }
-  
-  #contact-form button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background: #114b5f;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  #contact-form button:hover {
-    background: #88d498;
-  }
-  
-  /* Contact Info Adjustments */
-  .contact-info-box p {
-    font-size: 1rem;
-    text-align: center;
-    margin: 10px 0;
-  }
-  
-  .contact-info-box a {
-    color: #114b5f;
-    text-decoration: none;
+    .contact-box {
+      width: 100%;
+      max-width: 600px;
+      padding: 25px 20px;
+      margin: 0 auto;
+    }
   }
 }
+  
+
+
 
 
 
