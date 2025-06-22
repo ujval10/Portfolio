@@ -14,20 +14,10 @@ function autoScroll() {
         skillsScroll.scrollLeft = 0;
     }
 }
-setInterval(autoScroll, 50); // Adjust speed by changing the interval (e.g., 50ms)
 
-// Manual Navigation
-function scrollLeft() {
-    skillsScroll.scrollLeft -= 150;
-}
 
-function scrollRight() {
-    skillsScroll.scrollLeft += 150;
-}
 
-document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  });
+
 
 
 
